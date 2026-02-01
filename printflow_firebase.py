@@ -36,7 +36,19 @@ HTML_STUDENT = """
 <html>
 <head>
     <title>PrintFlow Student</title>
-    <meta http-equiv="refresh" content="10"> 
+    <script>
+    
+    setInterval(function(){
+        
+        let nameInput = document.querySelector('input[name="student_id"]').value;
+        let fileInput = document.querySelector('input[name="file"]').value;
+        
+        
+        if (!nameInput && !fileInput) {
+            window.location.reload();
+        }
+    }, 10000); // 10000ms = 10 seconds
+</script>
     <style>
         body { font-family: sans-serif; background: #f4f6f7; padding: 20px; }
         .box { background: white; max-width: 500px; margin: auto; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
